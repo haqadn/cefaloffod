@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What's Cookin'?</title>
+    <style>
+        body {
+            background-image: url(2687460.jpg);
+            background-size: cover;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            font-family: "Arial",sans-serif;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        #app {
+            padding: 20px;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+            font-size: 30px;
+        }
+
+        td, th {
+            border: 1px solid darkgrey;
+            padding: 0 10px;
+        }
+        
+        .col {
+            width: 50%;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 768px) {
+            .col {
+                width: 100%;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div style="width:100%;height:0;padding-bottom:43%;position:relative;"><iframe src="https://giphy.com/embed/BmmfETghGOPrW" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+        <div id="app" v-cloak>
+            <div v-if="!reveal">
+                <h2>Hang on, doing some heavy computation!</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <g transform="translate(50 50)"> <g transform="translate(-17 -17) scale(0.5)"> <g>
+                        <animateTransform attributeName="transform" type="rotate" values="0;45" keyTimes="0;1" dur="0.2s" begin="0s" repeatCount="indefinite"></animateTransform><path d="M37.3496987939662 -7 L47.3496987939662 -7 L47.3496987939662 7 L37.3496987939662 7 A38 38 0 0 1 31.359972760794346 21.46047782418268 L31.359972760794346 21.46047782418268 L38.431040572659825 28.531545636048154 L28.531545636048158 38.431040572659825 L21.460477824182682 31.359972760794346 A38 38 0 0 1 7.0000000000000036 37.3496987939662 L7.0000000000000036 37.3496987939662 L7.000000000000004 47.3496987939662 L-6.999999999999999 47.3496987939662 L-7 37.3496987939662 A38 38 0 0 1 -21.460477824182675 31.35997276079435 L-21.460477824182675 31.35997276079435 L-28.53154563604815 38.431040572659825 L-38.43104057265982 28.531545636048158 L-31.359972760794346 21.460477824182682 A38 38 0 0 1 -37.3496987939662 7.000000000000006 L-37.3496987939662 7.000000000000006 L-47.3496987939662 7.000000000000007 L-47.3496987939662 -6.9999999999999964 L-37.3496987939662 -6.999999999999997 A38 38 0 0 1 -31.35997276079435 -21.460477824182675 L-31.35997276079435 -21.460477824182675 L-38.431040572659825 -28.531545636048147 L-28.53154563604818 -38.4310405726598 L-21.4604778241827 -31.35997276079433 A38 38 0 0 1 -6.999999999999992 -37.3496987939662 L-6.999999999999992 -37.3496987939662 L-6.999999999999994 -47.3496987939662 L6.999999999999977 -47.3496987939662 L6.999999999999979 -37.3496987939662 A38 38 0 0 1 21.460477824182686 -31.359972760794346 L21.460477824182686 -31.359972760794346 L28.531545636048158 -38.431040572659825 L38.4310405726598 -28.53154563604818 L31.35997276079433 -21.4604778241827 A38 38 0 0 1 37.3496987939662 -6.999999999999995 M0 -23A23 23 0 1 0 0 23 A23 23 0 1 0 0 -23" fill="#abbd81"></path></g></g> <g transform="translate(0 22) scale(0.4)"> <g>
+                        <animateTransform attributeName="transform" type="rotate" values="45;0" keyTimes="0;1" dur="0.2s" begin="-0.1s" repeatCount="indefinite"></animateTransform><path d="M37.3496987939662 -7 L47.3496987939662 -7 L47.3496987939662 7 L37.3496987939662 7 A38 38 0 0 1 31.359972760794346 21.46047782418268 L31.359972760794346 21.46047782418268 L38.431040572659825 28.531545636048154 L28.531545636048158 38.431040572659825 L21.460477824182682 31.359972760794346 A38 38 0 0 1 7.0000000000000036 37.3496987939662 L7.0000000000000036 37.3496987939662 L7.000000000000004 47.3496987939662 L-6.999999999999999 47.3496987939662 L-7 37.3496987939662 A38 38 0 0 1 -21.460477824182675 31.35997276079435 L-21.460477824182675 31.35997276079435 L-28.53154563604815 38.431040572659825 L-38.43104057265982 28.531545636048158 L-31.359972760794346 21.460477824182682 A38 38 0 0 1 -37.3496987939662 7.000000000000006 L-37.3496987939662 7.000000000000006 L-47.3496987939662 7.000000000000007 L-47.3496987939662 -6.9999999999999964 L-37.3496987939662 -6.999999999999997 A38 38 0 0 1 -31.35997276079435 -21.460477824182675 L-31.35997276079435 -21.460477824182675 L-38.431040572659825 -28.531545636048147 L-28.53154563604818 -38.4310405726598 L-21.4604778241827 -31.35997276079433 A38 38 0 0 1 -6.999999999999992 -37.3496987939662 L-6.999999999999992 -37.3496987939662 L-6.999999999999994 -47.3496987939662 L6.999999999999977 -47.3496987939662 L6.999999999999979 -37.3496987939662 A38 38 0 0 1 21.460477824182686 -31.359972760794346 L21.460477824182686 -31.359972760794346 L28.531545636048158 -38.431040572659825 L38.4310405726598 -28.53154563604818 L31.35997276079433 -21.4604778241827 A38 38 0 0 1 37.3496987939662 -6.999999999999995 M0 -23A23 23 0 1 0 0 23 A23 23 0 1 0 0 -23" fill="#e15b64"></path></g></g> <g transform="translate(28 4) scale(0.3)"> <g>
+                        <animateTransform attributeName="transform" type="rotate" values="0;45" keyTimes="0;1" dur="0.2s" begin="-0.1s" repeatCount="indefinite"></animateTransform><path d="M37.3496987939662 -7 L47.3496987939662 -7 L47.3496987939662 7 L37.3496987939662 7 A38 38 0 0 1 31.359972760794346 21.46047782418268 L31.359972760794346 21.46047782418268 L38.431040572659825 28.531545636048154 L28.531545636048158 38.431040572659825 L21.460477824182682 31.359972760794346 A38 38 0 0 1 7.0000000000000036 37.3496987939662 L7.0000000000000036 37.3496987939662 L7.000000000000004 47.3496987939662 L-6.999999999999999 47.3496987939662 L-7 37.3496987939662 A38 38 0 0 1 -21.460477824182675 31.35997276079435 L-21.460477824182675 31.35997276079435 L-28.53154563604815 38.431040572659825 L-38.43104057265982 28.531545636048158 L-31.359972760794346 21.460477824182682 A38 38 0 0 1 -37.3496987939662 7.000000000000006 L-37.3496987939662 7.000000000000006 L-47.3496987939662 7.000000000000007 L-47.3496987939662 -6.9999999999999964 L-37.3496987939662 -6.999999999999997 A38 38 0 0 1 -31.35997276079435 -21.460477824182675 L-31.35997276079435 -21.460477824182675 L-38.431040572659825 -28.531545636048147 L-28.53154563604818 -38.4310405726598 L-21.4604778241827 -31.35997276079433 A38 38 0 0 1 -6.999999999999992 -37.3496987939662 L-6.999999999999992 -37.3496987939662 L-6.999999999999994 -47.3496987939662 L6.999999999999977 -47.3496987939662 L6.999999999999979 -37.3496987939662 A38 38 0 0 1 21.460477824182686 -31.359972760794346 L21.460477824182686 -31.359972760794346 L28.531545636048158 -38.431040572659825 L38.4310405726598 -28.53154563604818 L31.35997276079433 -21.4604778241827 A38 38 0 0 1 37.3496987939662 -6.999999999999995 M0 -23A23 23 0 1 0 0 23 A23 23 0 1 0 0 -23" fill="#f8b26a"></path></g></g></g>
+                </svg>
+            </div>
+            <div class="col" v-if="reveal">
+                <h1 class="line-1">Today's predicted menu :</h1>
+
+           <!-- <table v-if="schedule">
+               <tr v-for="day in 5">
+                   <td v-for="week in 5">M{{ schedule[week-1][day-1]+1 }}</td>
+               </tr>
+           </table>
+
+           <table v-if="items">
+               <tr v-for="(dayMenu, index) in menu">
+                   <th>M{{index+1}}</th>
+                   <td v-for="item in dayMenu">{{ items[item] }}</td>
+               </tr>
+           </table> -->
+
+            <!-- <h1>{{weekOfMonth}}: {{ todaysMenu+1 }}</h1> -->
+                <div>
+                    <p v-if="null == todaysMenu">No food for you!</p>
+                    <ul v-else>
+                        <li v-for="item in todaysMenu">{{ items[item] }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col" v-if="reveal">
+                <h2>Expert(Zia bhai)'s opinion:</h2>
+                <div v-if="reveal">
+                    <p v-if="null === ziaBhaiMenu">Not currently available</p>
+                    <p v-else-if="JSON.stringify(ziaBhaiMenu) === JSON.stringify(todaysMenu)">Predicted menu seems right.</p>
+                    <ul v-else>
+                        <li v-for="item in ziaBhaiMenu">{{ items[item] }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div id="disqus_thread" style="padding: 30px;"></div>
+        <script>
+
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+        var disqus_config = function () {
+            this.page.url = 'http://cefalofood.netlify.com';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = moment().format('YYYY-MM-DD'); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://cefalofood.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+var app = new Vue({
+    el: '#app',
+    data: {
+        items: [
+            '🍚 Plain Rice',
+            '🍘 Khichuri',
+            '🍘 Biriyani/Kacchi/Tehari',
+            '🍘 Polao',
+            '🍗 Chicken',
+            '🐟 Fish',
+            '🦃 Turkey',
+            '🐐 Mutton',
+            '🥗 Vegetables',
+            '🥗 Chinese Vegetables',
+            '🍆 Brinjal Fry',
+            '🍲 Bhorta',
+            '🍼 Dal (Bhuna) (Dabli/Boot)',
+            '🍼 Moshur Dal (Normal)',
+            '🍜 Moshur Dal (Bhuna)',
+        ],
+        menu: [
+            [0, 4, 8, 11, 12],
+            [1, 4, 10],
+            [0, 5, 8, 11, 13],
+            [0, 4, 8, 11, 14],
+            [0, 6, 8, 11, 14],
+            [2],
+            [3, 7, 9],
+            [1, 7, 10],
+            [3, 4, 9],
+            [3, 6, 9],
+        ],
+        schedule: [
+            [0, 2, 1, 2, 8],
+            [3, 1, 2, 0, 6],
+            [1, 2, 0, 2, 8],
+            [3, 1, 2, 0, 7],
+            [3, 2, 1, 0, 6]
+        ],
+        reveal: false,
+        guestOverride: window.guestPresent || false,
+        muttonToggle: window.muttonOnOddWeeks || false,
+        ziaBhaiMenus: window.ziaBhaiMenus || []
+    },
+    computed: {
+        todaysMenu () {
+            if(moment().day() < 1 || moment().day() > 5) return null;
+            var menu =  (this.menu[this.schedule[this.weekOfMonth - 1][moment().day()-1]]).slice();
+
+            if(this.guestOverride && moment().day() === 3) { // Mutton on tuesday when there is a guest
+                return this.menu[6];
+            }
+            else if(this.guestOverride && menu[1] === 5) { // No fish for guests
+                var options = [0, 1, 8]; // Menu can be replaced by one of these menus
+                var menuIndex = options[Math.floor(Math.random() * options.length)]; // Pick a random one
+                return this.menu[menuIndex];
+            }
+
+            if((moment().week() % 2 !== 0 ^ this.muttonToggle) && menu[1] === 7) { // Mutton only on alternate weeks.
+                return this.menu[1];
+            }
+
+            return menu;
+        },
+        ziaBhaiMenu () {
+            var date = moment().format('Y-MM-DD');
+            if(typeof this.ziaBhaiMenus[date] === 'undefined') {
+                return null;
+            }
+
+            return this.menu[this.ziaBhaiMenus[date]];
+        },
+        weekOfMonth () {
+            var firstWeekday = moment().date(1).day();
+            var offsetDate = moment().date() + firstWeekday;
+            return Math.ceil(offsetDate / 7);
+        }
+    },
+    created() {
+        setTimeout(() => {
+            this.reveal = true;
+        }, 4000)
+    }
+})
+</script>
+<script id="dsq-count-scr" src="//cefalofood.disqus.com/count.js" async></script>
+</body>
+</html>
